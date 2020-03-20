@@ -1,58 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bienvenido a Programacion IV</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <title>Conversores</title>
-</head>
+</head> 
 <body>
-    <form method="post" id="frmConversores">
-        <div class="container">
-            <div class="row row-cols-2">
-                <div class="col text-center bg-info text-white">
-                    APP CONVERSORES
-                </div>
-            </div>
-            <div class="row row-cols-4 p-2">
-                <div class="col">
-                    CONVERTIR:
-                    <select id="cboConvertir" class="form-control" onchange="seleccionar()">
-                        <option value="seleccion">Seleccionar</option>
-                        <option value="moneda">Moneda</option>
-                        <option value="almacenamiento">Almacenamiento</option>
-                        <option value="longitud">Longitud</option>
+<body class="bg-dark">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+            <a class="navbar-brand" href="#">::.. APP ACADEMICA ..::</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+@@ -46,7 +46,6 @@
+            <div id="vistas-notas"></div>
+          </div>
+    </div>
 
-                    </select>
-                </div>
-            </div>
-            <div class="row row-cols-4 p-2">
-                <div class="col">
-                    DE:
-                    <select id="cboDe" class="form-control">
-                    </select>
-                </div>
-                <div class="col">
-                    A:
-                    <select id="cboA" class="form-control">
-                    </select>
-                </div>
-            </div> 
-            <div class="row row-cols-4 p-2">
-                <div class="col text-center">
-                    <input type="text" required="required" pattern="[0-9.]{1,}" placeholder="Cantidad" id="txtCantidadConversor" class="form-control">
-                </div>
-                <div class="col text-center">
-                    <p class="bg-success text-white" id="lblRespuesta">Respuesta:</p>
-                </div>
-            </div>
-            <div class="row row-cols-2 p-2">
-                    <input type="submit" id="btnConvertir" value="Convertir" class="btn btn-primary">
-                </div>
-            </div>
-        </div>
-    </form>
-    <script src="app.js"></script>
+    <script src="public/js/app.js"></script>
 </body>
-</html> hola
+</html> 
