@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", e=>{
-    const form = document.querySelector("#frmConversores");
+    const form = document.querySelector("#frmapp");
     form.addEventListener("submit", event=>{
         event.preventDefault();
   
         let de = document.querySelector("#cboDe").value,
             a = document.querySelector("#cboA").value,
-            cantidad = document.querySelector("#txtCantidadConversor").value,
+            cantidad = document.querySelector("#txtCantidadapp").value,
             opcion = document.getElementById('cboConvertir');
   
         let monedas = {
