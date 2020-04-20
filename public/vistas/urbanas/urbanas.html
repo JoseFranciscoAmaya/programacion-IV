@@ -1,0 +1,60 @@
+<form v-on:submit.prevent="guardarUrbana" data-accion="nuevo" data-idurbana='' id="frm-urbanas" method="post">
+    <div class="card text-white bg-primary mb-3" style="max-width: 24rem;">
+        <div class="card-header">
+            Zona Urbana
+        
+            <button type="button" id="btn-close-urbanas" class="close" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="card-body">
+            <div class="row p-2">
+                <div class="col-4">
+                    Municipios
+                </div>
+                <div class="col-8">
+                    <input type="text" v-model="urbana.municipio" placeholder="ingresar municipios" class="form-control">
+                </div>
+            </div>
+            <div class="row p-2"> 
+                <div class="col-4">
+                    Ciudades
+                </div>
+                <div class="col-8">
+                    <input type="text" v-model="urbana.ciudad" placeholder="ingresar ciudades" class="form-control">
+                </div>
+            </div>
+            <div class="row p-2">
+                <div class="col-4">
+                    Avenidas
+                </div>
+                <div class="col-8">
+                    <input type="text" v-model="urbana.avenida" placeholder="ingresar avenida " class="form-control">
+                </div>
+            </div>
+            <div class="row p-2">
+                <div class="col-4">
+                    Descripcion
+                </div>
+                <div class="col-8">
+                    <input type="text" v-model="urbana.descripcion" placeholder="ingresar descripcion" class="form-control">
+                </div>
+            </div>
+            <div class="row p-2"> 
+                <div class="col-12 text-center">
+                    <input id="btnGuardarUrbanas" type="submit" class="btn btn-outline-danger text-dark" value="Guardar">
+                    <input type="reset" class="btn btn-outline-warning text-dark" value="Limpiar">
+                    <input type="button" class="btn btn-outline-success mostrar-buscar-urbanas text-dark" data-modulo="urbanas" data-form="buscar-urbanas" value="Buscar">
+                </div>
+            </div>
+            <div class="row p-2">
+                <div class="col-12 text-center">
+                    <div class="alert alert-success" role="alert">
+                        {{ urbana.msg }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<script src="public/vistas/urbanas/urbanas.js"></script>

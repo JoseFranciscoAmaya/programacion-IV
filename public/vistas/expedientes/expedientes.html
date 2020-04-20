@@ -1,0 +1,60 @@
+<form v-on:submit.prevent="guardarExpediente" data-accion="nuevo" data-idexpediente='' id="frm-expedientes" method="post">
+    <div class="card text-white bg-primary mb-3" style="max-width: 28rem;">
+        <div class="card-header"> 
+            Estado de salud
+        
+            <button type="button" id="btn-close-expedientes" class="close" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="card-body">
+            <div class="row p-2">
+                <div class="col-4">
+                    Cronicas
+                </div>
+                <div class="col-8">
+                    <input type="text" v-model="expediente.cronica" placeholder="ingresar cronicas" class="form-control">
+                </div>
+            </div>
+            <div class="row p-2"> 
+                <div class="col-4">
+                    Leves
+                </div>
+                <div class="col-8">
+                    <input type="text" v-model="expediente.leve" placeholder="ingresar leves" class="form-control">
+                </div>
+            </div>
+            <div class="row p-2">
+                <div class="col-4">
+                    Sintomas
+                </div>
+                <div class="col-8">
+                    <input type="text" v-model="expediente.sintoma" placeholder="ingresar sintomas " class="form-control">
+                </div>
+            </div>
+            <div class="row p-2">
+                <div class="col-4">
+                    Discapacidades
+                </div>
+                <div class="col-8">
+                    <input type="text" v-model="expediente.discapacidad" placeholder="ingresar discapacidades" class="form-control">
+                </div>
+            </div>
+            <div class="row p-2"> 
+                <div class="col-12 text-center">
+                    <input id="btnGuardarExpedientes" type="submit" class="btn btn-outline-danger text-dark" value="Guardar">
+                    <input type="reset" class="btn btn-outline-warning text-dark" value="Limpiar">
+                    <input type="button" class="btn btn-outline-success mostrar-buscar-expedientes text-dark" data-modulo="expedientes" data-form="buscar-expedientes" value="Buscar">
+                </div>
+            </div>
+            <div class="row p-2">
+                <div class="col-12 text-center">
+                    <div class="alert alert-success" role="alert">
+                        {{ expediente.msg }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<script src="public/vistas/expedientes/expedientes.js"></script>

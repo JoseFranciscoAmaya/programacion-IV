@@ -1,0 +1,9 @@
+.modulos{
+    position: absolute;
+}
+.bg-secondary{
+    background-image: url(../../img/imagen.jpeg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
