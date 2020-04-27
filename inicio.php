@@ -1,3 +1,14 @@
+<?php
+//entry.php
+session_start();
+if(!isset($_SESSION["username"]))
+{
+     header("location:index.php?action=login");
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,17 +20,15 @@
     <title>ADULTOS MAYORES</title>
 </head>
 <body class="bg-secondary">
-    <nav class="navbar navbar-expand-lg navbar-blue bg-white">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">::..FIVE SYSTEMS..::</a>
-       
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">INICIA SESION <span class="sr-only">(current)</span></a>
-                </li>
+            <ul class="navbar-nav mr-auto ">
+
                 <li class="nav-item">
                     <a class="nav-link mostrar-hombres" data-modulo="hombres" data-form="hombres" href="#">Hombres</a>
-                </li> 
+                </li>
                 <li class="nav-item">
                     <a class="nav-link mostrar-mujeres" data-modulo="mujeres" data-form="mujeres" href="#">Mujeres</a>
                 </li>
@@ -32,8 +41,23 @@
                 <li class="nav-item">
                     <a class="nav-link mostrar-expedientes" data-modulo="expedientes" data-form="expedientes" href="#">Expediente clinico</a>
                 </li>
-                
+                <li class="nav-item">
+                    <a class="nav-link mostrar-expedientes" data-modulo="ubicacion" data-form="ubicacion" href="#">Ubicación</a>
                 </li>
+                </ul>
+
+                  <ul class="navbar-nav ml-auto ">
+                <li class="nav-item">
+                  <?php
+                  echo '
+                  <a class="nav-link mostrar-expedientes"  href="#" >Usuario - '.$_SESSION["username"].'</a>';
+                  ?>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mostrar-expedientes"  href="logout.php">Cerrar Sesion</a>
+                </li>
+
+
             </ul>
         </div>
     </nav>
@@ -48,6 +72,7 @@
         <div class="modulos" id="vista-buscar-urbanas"></div>
         <div class="modulos" id="vista-expedientes"></div>
         <div class="modulos" id="vista-buscar-expedientes"></div>
+
 
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

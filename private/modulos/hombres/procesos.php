@@ -61,12 +61,16 @@ class hombre{
             }
         }
     }
-    public function buscarHombre($valor = ''){
+    public function buscarHombre($valor = '')
+    {
+        
         $this->db->consultas('
             select hombres.idHombre, hombres.nombre, hombres.apellido, hombres.edad, hombres.dui
             from hombres
             where hombres.edad like "%'. $valor .'%" or hombres.nombre like "%'. $valor .'%"
         ');
+        
+        
         return $this->respuesta = $this->db->obtener_data();
     }
     public function eliminarHombre($idHombre = 0){
